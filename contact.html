@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under the Sea</title>
+
+    <!-- Link to Font Awesome Fonts -->
+    <script src="https://kit.fontawesome.com/4fb42bf5f7.js" crossorigin="anonymous"></script>
+
+    <!-- Link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Lato&display=swap" rel="stylesheet">
+
+    <!-- Link to CSS Sheet -->
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+
+    <!-- Header section including nav -->
+    <header class="contactHeader">
+        <div class="wrapper">
+            <nav>
+                <label for="toggle">
+                    <i class="fa fa-bars"></i>
+                    <span class="menu-label">Menu</span>
+                </label>
+                <input type="checkbox" id="toggle" name="toggle" />
+                <ul class="slideOutMenu">
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="/">ABOUT</a></li>
+                    <li><a href="./blog.html">BLOG</a></li>
+                    <li><a href="./contact.html" class="currentPage">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <div class="contactHeaderContents">
+                <h1>GET IN TOUCH</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main section including contact sidebar and form -->
+    <section class="mainWrapper contactMainProps">
+        <div class="wrapper">
+            <div class="pageMainContainer">
+                <section class="sidebar altProps">
+                    <div class="sidebarText contactBar">
+                        <div class="iconRow">
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                        <div class="subContactBar">
+                            <h3><a href="info@email.com">INFO@EMAIL.COM</a></h3>
+                            <p class="address">
+                                123-456-7890<br>
+                                123 Queen Street West, Unit 10<br>
+                                Toronto, Ontario<br>
+                                M5V2D5
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="featureContents">
+                    <form class="contactFormProps">
+                        <div class="contactFields">
+                            <label for="guestName" class="sr-only"></label>
+                            <input type="text" name="guestName" id="guestName" placeholder="Name">
+                            <label for="guestEmail" class="sr-only"></label>
+                            <input type="email" name="guestEmail" id="guestEmail" placeholder="Email address">
+                        </div>
+                        <label for="guestComment" class="sr-only"></label>
+                        <textarea name="guestComment" id="guestComment" placeholder="Comment"></textarea>
+                        <button class="contactSubmit" type="submit" name="guestSubmit" value="submit">SUBMIT</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footerPositioning">
+        <p>Copyright &copy; 2021 Juno College</p>
+    </footer>
+    <!-- Load formScript.js -->
+    <script src="./formScript.js"></script>
+</body>
+
+</html>

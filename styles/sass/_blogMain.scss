@@ -1,0 +1,117 @@
+// Sets main section of blog.html to position relative and padding-bottom: 68px;
+.blogProps{
+    position: relative;
+    padding-bottom: 68px;
+}
+
+// Generic page main container used by both contact.html and blog.html
+.pageMainContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .sidebar{
+        flex: 0 1 29%;
+        height: max-content;
+        background-color: $spruce;
+        margin-top: 105px;
+        img{
+            position: absolute;
+            left: 0;
+            top: 90px ;
+            width: 32%;
+        }
+    }
+    .featureContents{
+        flex: 0 1 65.5%;
+    }
+}
+
+//Formatting for h3
+h3{
+    font-size: 1.9rem;
+    padding-bottom: 14px;
+}
+
+//Formatting for sidebar container
+.sidebar{
+    .sidebarFiller{
+        height: 26vw;
+        max-height: 332px;
+        width: 100%;
+        z-index: 50;
+    }
+}
+
+//Common formatting for text subcontainer within sidebar
+.sidebarText{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    .sidebarTop{
+        padding-bottom: 56px;
+    }
+}
+
+//List properties for text container in the bottom half of BLOG sidebar
+.sidebarBottom{
+    ul{
+        list-style-position: inside;
+    }
+    li{
+        font-size: 0.9rem;
+        font-family: 'Lato', sans-serif;
+        margin: 8px 0;
+        span{
+            font-size: 1.28rem;
+            padding-left:15px;
+        }
+    }
+}
+
+//Background filler for Blog main Image due to position absolute on Image
+.featuredContentsFiller{
+    max-height: 391px;
+    height: 30.5vw;
+    border-left: 5px solid $robinBlue;
+}
+
+//Common formatting for featureContents container
+.featureContents{
+    position: relative;
+    .featureImg{
+        position: absolute;
+        width: 115%;
+        top: -198px;
+        left: 34px;
+        z-index: 5;
+    }
+    .featureImgBG{
+        width: 116.5%;
+        height: 39.5vw;
+        max-height: 506px;
+        background-color: $robinBlue;
+        position: absolute;
+        left: 0;
+        top: -150px;
+    }
+}
+
+//Formatting for text within featureContents container
+.featureContentText{
+    border-left: 5px solid $robinBlue;
+    border-bottom: 5px solid $robinBlue;
+    padding-left: 40px;
+    padding-bottom: 15px;
+    h2{
+        text-align: left;
+    }
+    p{
+        padding-left: 4px;
+    }
+}
+
+//Specific formatting for first paragraph paragraph within feautureContent text container
+.featureContentText p:nth-of-type(1){
+    padding-top: 10px;
+    padding-bottom: 50px;
+}

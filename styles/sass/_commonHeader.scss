@@ -1,0 +1,107 @@
+
+// Page is designed at 1280px wide
+
+// Body formatting
+body{
+    background: $darkBlueGrey;
+}
+
+// Header fomatting
+header{
+    background-image: linear-gradient(90deg, rgba(0, 28, 36, 0.7) 0%, rgba(10,47,69,0.6) 100%), url(../assets/header-image.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 591px;
+    
+    .homeHeaderContents{
+        display: flex;
+        justify-content: space-between;
+        // H1 Formatting
+        h1{
+            color: $white;
+            padding-top: 25px;
+            font-size: 10.8rem;
+            line-height: 9.7rem;
+            flex: 0 0 35%;
+            text-align: left;
+            z-index: 5;
+        }
+    }
+}
+
+
+// NAV formatting
+nav{
+    padding-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    // Set slideout menu to appear in front of all elements
+    .slideOutMenu{
+        z-index: 30;
+    }
+    
+    // NAV UL formatting
+    ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 37%;
+    }
+    //Formatting for the hamburger menu
+    .fa-bars{
+        font-size: 3rem;
+        display: none;
+    }
+    label,
+    input{
+        display: none;
+    }
+}
+
+// NAV li formatting, including <a> tags and <a> hover state
+nav li{
+    a{
+        color: $white;
+        text-decoration: none;
+        font-size: 1.7rem;
+        line-height: 2.9rem;
+        letter-spacing: 0.1rem;
+        &:hover{
+            color: $robinBlue;
+        }
+    }
+}
+//Additional wrapper to constrain images within viewport for large window width
+.indexProps{
+    position: relative;
+}
+
+// Container for goldfish image
+.goldfishContainer{
+    position: absolute;
+    right: 0;
+    top: 160px;
+    width: 57%;
+    .goldie{
+        width: 250px;
+        top: 97px;
+        left: 39px;
+        height: auto;
+        position: absolute;
+        z-index: 50;
+    }
+    .goldieBG, .goldieStatic{
+        width: 100%;
+    }
+    //Hide the static goldfish image initially(for desktop widths)
+    .goldieStatic{
+        display: none;
+    }
+}
+
+// Class for changing current page <a> tag in NAV to robin blue in color
+.currentPage{
+    color: $robinBlue;
+}

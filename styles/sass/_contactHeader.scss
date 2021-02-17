@@ -1,0 +1,22 @@
+// Header section formatting specific to Contact page
+.contactHeader{
+    background-image: url(../assets/contact-header.jpg);
+    height: 460px;
+    .contactHeaderContents{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-top: 83px; 
+    }
+}
+
+// Formatting for H1 specific to Contact page
+h1{
+    font-size: 6.3rem;
+    padding-top: 0;
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    flex: 1 1 65.5%;
+    margin-right: 20px;
+}

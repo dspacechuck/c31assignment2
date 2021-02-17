@@ -1,0 +1,220 @@
+@media(max-width: 1279px)
+{
+  .greenSection{
+    .imageContainer{
+        .staticNemo{
+            display: inline-block;
+            z-index:1;
+        }
+    
+        .nemoBowl{
+            display: none;
+        }
+    
+        .nemo{
+            display: none;
+        }
+    }
+ } 
+  //Hide goldie and its background, display the static background with goldie in it.
+  .goldfishContainer{
+    .goldie{
+        display: none;
+    }
+    // .goldieStatic{
+    //     display: block;
+    // }
+  }
+
+}
+
+//Formatting for index.html at viewport 1000px width
+@media(max-width: 1000px){
+    //Adjusting margins for the greenblog
+    .greenSection{
+        .greenBlog{
+            div:nth-of-type(2){
+                margin-bottom: 0;
+            }
+            div:nth-of-type(3){
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+//Formatting for index.html at viewport 880px width
+@media(max-width: 880px){
+    nav{
+        .fa-bars,
+        label,
+        input{
+            display: block;
+        }
+        //Slideout menu formatting
+        .slideOutMenu {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background: rgba(12, 20, 35, 0.8);
+            position: fixed;
+            top: 0;
+            right: -35%;
+            width: 35%;
+            height: 100vh;
+            z-index: 15;
+            transition: all 1s ease;
+        }
+        //Styles for the Slideout menu links
+        .slideOutMenu a {
+            color: $white;
+            font-size: 3rem;
+            border-bottom: 2px solid $white;
+            display: block;
+            padding: 20px;
+            transition: all 0.5s ease-in-out;
+        }
+        .slideOutMenu a:hover,
+        .slideOutMenu a:focus {
+            background: $robinBlue;
+            color: $darkBlueGrey;
+        }
+        input[type="checkbox"]:checked + .slideOutMenu {
+            right: 0;
+        }
+        input[type="checkbox"] {
+            visibility: hidden;
+        }
+        label[for="toggle"] {
+            position: fixed;
+            color: $white;
+            top: 20px;
+            left: 20px;
+            z-index: 15;
+            cursor: pointer;
+        }          
+    }
+
+    //Adjusting container for goldFish Image
+    .goldfishContainer{
+        width: 45%;
+    }
+    //Additional formatting for green section
+    .whatIsUnder{
+        margin: 110px 0 110px 0;
+    }
+    .greenSection .greenBlog{
+        div:nth-of-type(2){
+            padding-left: 50px;
+        }
+        div:nth-of-type(3){
+            padding-right: 50px;
+        }
+    }
+}
+
+//Formatting for index.html at viewport 740px width
+@media(max-width:740px){
+    //Adjusting the wrapper to fit more content withing vw
+    .wrapper{
+        width: 90%;
+    }
+    //Additional formatting for the index.html
+    .whatIsUnder p{
+        padding: 0 0 19.5px 0;
+    }
+    .greenSection .greenBlog{
+        flex-direction: column;
+        div:nth-of-type(2){
+            padding: 32px 0 60px 0;
+        }
+        div:nth-of-type(3){
+            padding: 0 0 32px 0;
+        }
+    }
+    .greenSection .imageContainer{
+        img{
+            position: static;
+            width: 100%;
+        }
+        img[alt^="Singular"]{
+            box-shadow: none;
+        }
+    }
+    .imgShadow{
+        display: none;
+    }
+    .textContainer{
+        padding: 0;
+    }
+    .blueSection{
+        padding-top: 46px;
+    }
+    .blueSectionInner{
+        flex-direction: column;
+        .blueContent{
+            padding-right: 0;
+            padding-left: 30px;
+        }
+    }
+    .thisMonthCont{
+        padding: 80px 0;
+    }
+    .thisMonthInnerCont{
+        flex-direction: column;
+        .fishSwimCont img{
+            width: 100%;
+            box-shadow: none;
+            padding-bottom: 25px;
+        }
+        .thisMonthTextCont{
+            padding-left: 0;
+            align-items: center;
+        }
+    }
+    .greenGalleryCont .greenInnerCont{
+        img:nth-of-type(3){
+            display: none;
+        }
+        img{
+            width: calc((100% - 30px) / 2);
+        }
+    }
+}
+
+//Formatting for index.html at viewport 640px width
+@media(max-width:640px){
+    header{
+        position: relative;
+        .goldfishContainer{
+            bottom: 0;
+            top: unset;
+            width: 55%;
+        }
+    }
+    .indexProps{
+        position: static;
+    }
+}
+
+//Formatting for index.html at viewport 500px width
+@media(max-width:500px){
+    nav .slideOutMenu{
+        width: 85%;
+        right: -85%;
+    }
+    .greenGalleryCont .greenInnerCont{
+        justify-content: center;
+        img:nth-of-type(1){
+            display: none;
+        }
+        img{
+            width: 80%;
+        }
+    }
+    .blueSectionInner{
+        .blueContent{
+            padding-left: 10px;
+        }
+    }
+}

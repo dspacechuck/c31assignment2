@@ -1,0 +1,290 @@
+// Flex container for "What is Under the Sea?" section + styles
+.whatIsUnder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 220px 0 176px 0;
+  * {
+    padding: 0 6.5vw;
+    padding-bottom: 1.95rem;
+  }
+  h2 {
+    text-align: center;
+  }
+}
+
+//Common h2 formatting
+h2 {
+  font-size: 2.6rem;
+  letter-spacing: 0.1rem;
+  color: $white;
+}
+
+//Common paragraph formatting
+p {
+  font-size: 1.28rem;
+  font-family: "Lato", sans-serif;
+  line-height: 2.44rem;
+}
+
+//Hover properties for all buttons
+button:hover,
+button:focus{
+  background: $white;
+  color: $darkBlueGrey;
+  cursor: pointer;
+}
+
+//Common Light Blue Button formatting
+.lightBlueBtn {
+  background: $robinBlue;
+  color: $darkBlueGrey;
+  padding: 12px 19px;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+//Common Dark Blue Button formatting
+.darkBlueBtn {
+  background: $darkBlueGrey;
+  border: none;
+  color: $white;
+  padding: 11px 13px;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+//Setting a flex on the green section and styling it
+.greenSection {
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5.6rem;
+    padding-top: 0;
+    padding-bottom: 4rem;
+    p {
+      margin: 22px 0;
+    }
+  }
+  //Setting width for the containers
+  .imageContainer,
+  .textContainer {
+    flex: 1 1 50%;
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  //Formatting box-shadows and Images
+  .imageContainer {
+    .imgShadow {
+      position: absolute;
+      width: 41%;
+      height: 25.5vw;
+      background-color: $robinBlue;
+      max-height: 326.4px;
+      left: 42px;
+      top: -32px;
+    }
+    img {
+      position: absolute;
+      width: 42%;
+    }
+    //Select images with alt text starting with "Girl"
+    img[alt^="Girl"] {
+      left: 0;
+      top: -75px;
+      z-index: 10;
+    }
+    //Select images with alt text starting with "Singular"
+    img[alt^="Watch"], .staticNemo {
+      bottom: -75px;
+      right: 0;
+      box-shadow: -34px 35px $robinBlue;
+    }
+    // Renders static Nemo image to display: none at desktop widths of 1280px and higher
+    .staticNemo{
+      display: none;
+    }
+    
+    //Selects div for Nemo the fish! (active on desktop mode only.)
+    .nemo{
+      width:4%;
+      position: absolute;
+      right: 250px;
+      top: 490px;
+      animation-name: fishSwim;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+             
+      img{
+        width: 100%;
+        height: auto;
+      }
+    } 
+
+  
+  }  
+}
+  
+//Formatting for the image and text section with Green background
+.greenSection {
+  background-color: $spruce;
+  padding: 32px 0;
+  .greenBlog {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    div:nth-of-type(2) {
+      padding-left: 10.2rem;
+      padding-right: 0;
+      padding-top: 32px;
+      padding: 20px 0 20px 102px;
+      margin-bottom: 68px;
+    }
+    div:nth-of-type(3) {
+      justify-content: flex-end;
+      text-align: end;
+      padding: 0 10.1rem 0 0;
+      margin-top: 68px;
+    }
+  }
+}
+
+//Formatting padding on Blue Section
+.blueSection {
+  padding-top: 100px;
+  padding-bottom: 46px;
+  .blueSectionInner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+// Sub-container within .blueSection
+//Setting a display flex and formatting on sub-container within blueSection
+.blueContent {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 50%;
+  padding: 30px 0;
+  padding-right: 20px;
+  .blueContentText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    h2 {
+      padding: 10px 0;
+    }
+  }
+}
+
+//Formatting for each icon inside the dark blue info section
+.iconContainer {
+  width: max-content;
+  padding-right: 10px;
+  // Formatting for the round background behind the icon
+  .iconBg {
+    background: $robinBlue;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+}
+
+// Formatting for the icon itself
+.fas {
+  color: $darkBlueGrey;
+  font-size: 2.5rem;
+}
+
+// Background image container for shark full bleed JPG
+.sharkContainer {
+  background-image: url("../assets/banner.jpg");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+}
+
+// This Month Profile Container
+.thisMonthContainer {
+  padding: 100px 0 80px 0;
+}
+
+// Flex container for fish image and This Month Profile Text sub containers
+.thisMonthInnerCont {
+  display: flex;
+  .fishSwimCont {
+    flex: 1 1 30%;
+    img {
+      width: 80%;
+      box-shadow: 30px 30px $robinBlue;
+    }
+  }
+  .thisMonthTextCont {
+    flex: 1 1 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space space-between;
+    align-items: flex-start;
+    padding-top: 5px;
+    padding-left: 43px;
+    h2 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.58rem;
+      letter-spacing: 0;
+      padding-top: 16px;
+      padding-bottom: 42px;
+    }
+  }
+}
+
+// Parent container for 3 green photos section
+.greenGalleryCont {
+  background-color: $spruce;
+  padding: 80px 0;
+  .greenInnerCont {
+    display: flex;
+    justify-content: space-between;
+    img {
+      width: calc((100% - 60px) / 3);
+    }
+  }
+}
+
+//Common footer properties
+footer {
+  text-align: center;
+  background-color: $robinBlue;
+  color: black;
+  padding: 4.5px 0;
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+// Additional properties to adjust footer placement for contact.html page (short vh) and fixes footer to bottom of page
+.footerPositioning {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
+}
+@media (max-height: 800px) {
+  .footerPositioning {
+    position: static;
+  }
+}

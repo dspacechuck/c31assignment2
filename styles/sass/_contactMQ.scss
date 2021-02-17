@@ -1,0 +1,91 @@
+//Formatting for contact.html at viewport 880px width
+@media (max-width: 880px){
+    .contactHeaderContents{
+        h1{
+            margin-right: 0;
+        }
+    }
+    //Formatting wrapper to fit more content
+    .contactMainProps .wrapper{
+        width: 90%;
+        .pageMainContainer{
+            flex-direction: column;
+            .sidebar{
+                margin-top: 0;
+                background: $darkBlueGrey;
+                padding-right: 0px;
+            }
+        }
+    }
+    .contactFormProps{
+        right: -30px;
+        position: relative;
+        width: 100%;
+        top: -115px;
+    }
+    .pageMainContainer{
+        .altProps{
+            display: flex;
+            justify-content: flex-end;
+            order: 2;
+        }
+    }
+    .contactBar{
+        padding-top: 0;
+        flex-direction: row;
+    }
+    .iconRow{
+        width: 100%;
+        padding: 0 20px;
+        a{
+            padding: 20px;
+        }
+        .fab{
+            font-size: 3.5rem;
+        }
+    }
+    .footerPositioning{
+        position: static;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: 0;
+    }
+}
+
+//Formatting for contact.html at viewport 740px width
+@media(max-width: 740px){
+    .contactBar{
+        padding-right: 0;
+    }
+    .iconRow{
+        flex-wrap: wrap;
+        align-items: center;
+        padding-right: 10px;
+        a{
+            width: 50%;
+            padding: 2px;
+        }
+    }
+    .altProps{
+        justify-content: center;
+    }
+    .sidebar{
+        padding-right: 0;
+    }
+}
+
+//Formatting for contact.html at viewport 640px width
+@media(max-width:640px){
+    .contactFormProps .contactFields{
+        flex-direction: column;
+        width: 100%
+    }
+    .contactFormProps{
+        input{
+            padding: 15px;
+        }
+        textarea{
+            padding: 10px 12px;
+        }    
+    }
+}

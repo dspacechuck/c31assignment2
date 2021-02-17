@@ -1,0 +1,111 @@
+// Formatting for form section 
+form{
+    display: flex;
+    width: 100%;   
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.28rem;  
+    .contactFields{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        input[type="text"], 
+        input[type="email"]{
+            flex: 0 1 48%;
+        }
+    }
+    //Formatting for form input and textarea on focus
+    input, textarea{
+        &:focus{
+            outline: none;
+        }
+    }
+
+     //Formatting for form input area
+    input{
+        background: $darkBlueGrey;
+        color: $white;
+        padding: 20px 30px;
+        border: none;
+        border-bottom: 2px solid $robinBlue;
+        font-family: 'Lato', sans-serif;
+        line-height: 2.44rem;
+        &:required, &:invalid{
+            box-shadow: none;
+        }
+    }  
+
+    textarea{
+        height: 175px;
+        background: $darkBlueGrey;
+        color: $white;
+        border: 2px solid $robinBlue;
+        margin: 30px 0;
+        padding: 18px 28px;
+        resize: none;
+        font-family: 'Lato', sans-serif;
+        line-height: 2.44rem;
+    }
+    // General placeholder text formatting 
+    ::placeholder{
+        font-family: 'Lato', sans-serif;
+        line-height: 2.44rem;
+        opacity: 1;
+        letter-spacing: 0.2rem;
+    }
+    // POST COMMENT button formatting
+    button{
+        background: $spruce;
+        border: none;
+        color: $white;
+        font-size: 1.4rem;
+        font-weight: 700;
+        padding: 11px 0;
+    }
+
+    // Class to disable button
+    .disabledBTN{
+        background: grey;
+        opacity: 0.5;
+        color: rgb(240, 240, 240);
+        cursor: not-allowed;
+    }
+
+    // Class to fade in a new comment
+    // .fadeInComment{
+    //     animation: fadeIn 2s ease 0 1;
+    // }
+
+    // @keyframes fadeIn{
+    //     0%{
+    //         opacity: 0;
+    //     }
+
+    //     100%{
+    //         opacity: 1;
+    //     }
+
+    // }
+}
+
+// Additional form properties for contact.html page
+.contactFormProps{
+    position: absolute;
+    width: 117%;
+    right: -70px;
+    top: -196px;
+    padding: 65px 54px 45px 54px;
+    background: $spruce;
+    box-shadow: -30px 30px $robinBlue;
+    input, textarea{
+        background: $spruce;
+        padding: 12px 20px;
+    }
+    textarea{
+        padding: 12px 20px;
+    }
+}
+//Specific formatting for contact.html Form submit button
+.contactSubmit{
+    background: $darkBlueGrey;
+}

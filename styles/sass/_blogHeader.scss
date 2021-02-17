@@ -1,0 +1,23 @@
+// Header section formatting specific to blog page
+.blogHeader{
+    background-image: url(../assets/blog-header.jpg);
+    height: 460px;
+    .blogHeaderContents{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 83px; 
+        h1{
+            flex: 1 1 65.5%;
+            margin-right: 91px;
+        }
+    }
+}
+
+// Formatting for H1 
+h1{
+    font-size: 6.3rem;
+    padding-top: 0;
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}

@@ -1,0 +1,125 @@
+//Formatting for blog.html at viewport 880px width
+@media (max-width: 880px){
+    // Add margin-top to blogHeaderContents due to NAV bar display: none at this width.
+    .blogHeader{
+        .blogHeaderContents{
+            margin-top: 101px;
+        }   
+    }
+    .featuredContentsFiller{
+        height: 26.5vw;
+    }
+}
+
+//Formatting for blog.html at viewport 740px width
+@media (max-width: 740px){
+    .blogProps{
+        .wrapper{
+            width: 90%;
+        }
+    }
+    .featureContents .featureImg{
+        width: 107%;
+    }
+    .pageMainContainer .sidebar{
+        flex: 0 1 30%;
+    }
+    .sidebarBottom li span{
+        padding-left: 5px;
+    }
+    .featuredContentsFiller{
+        height: 24.5vw;
+    }
+}
+
+//Formatting for blog.html at viewport 680px width
+@media (max-width: 680px){
+    .blogHeader .blogHeaderContents{
+        margin-top: 100px;
+        h1{
+            margin-left: 30px;
+            text-align: left;
+        }
+    }
+    .featureContents{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+        .featureImg{
+            position: static;
+            width: 100%;
+            height: 100%;
+        }
+        .featureImgBG{
+            display: none;
+        }
+    }
+    .featureContentText{
+        padding: 40px 30px;
+        border: 5px solid $robinBlue;
+        border-top: none;
+    }
+    .featuredContentsFiller{
+        display: none;
+    }
+    .pageMainContainer{
+        flex-direction: column;      
+        align-items: center;
+        .sidebar{
+            margin-top: 34px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 31px;
+            align-items: center;
+            .sidebarFiller{
+                display: none;
+            }
+        }
+    }
+    .sidebarText{
+        padding: 20px 31px 31px 31px;
+        .sidebarTop{
+            padding-bottom: 31px;
+            h3{
+                padding-bottom: 20px;
+            }
+        }
+    }
+    .sidebarBottom{
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                width: 50%;
+            }
+        } 
+    }
+    .pageMainContainer .sidebar img{
+        position: static;
+        width: 90%;
+    }
+    .commentsContainer{
+        padding: 40px 30px;
+    }
+}
+
+//Formatting for blog.html at viewport 500px width
+@media (max-width: 500px){
+    .contactFields{
+        flex-direction: column;
+        
+    }
+    .commentsContainer {
+        padding: 60px 30px 10px 30px;
+    }
+    
+    form{
+        input{
+            padding: 15px;
+        }
+        textarea{
+            padding: 10px 12px;
+        }
+    }
+}
