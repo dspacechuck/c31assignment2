@@ -9,16 +9,13 @@ const commentContainer = document.querySelector('.commentsContainer');
 // Add submit form event listener
 formSelector.addEventListener('submit', function (buttonE) {
     buttonE.preventDefault();
-    console.log(buttonE);
     // Function to check that the form is filled out
     checkFormComplete();
 
     function checkFormComplete() {
-        console.log(formComment);
         // If email is valid and form comment isn't empty
         if (isValidEmail(emailInput) && formComment.value) {
             // Form comment and email address are mandatory
-            console.log("The form has comments");
             checkUserName();
             // If the current form is NOT the contact form: (i.e.: has NO class name)
             if (!formSelector.className) {
@@ -44,7 +41,6 @@ formSelector.addEventListener('submit', function (buttonE) {
     function clearForm() {
         formSelector.reset();
         userName = "Anonymous";
-        console.log(emailInput.value);
     }
     // Helper function to add a comment to the page
     function addAComment() {
@@ -78,7 +74,6 @@ formSelector.addEventListener('submit', function (buttonE) {
 
 // Function to disable the form after a comment has been added successfully.
 function disableForm() {
-    console.log(submitBTN);
     submitBTN.classList.add('disabledBTN');
     submitBTN.style.opacity = 0.5;
     submitBTN.disabled = 'true';
@@ -138,10 +133,8 @@ function isValidEmail(emailToVerify) {
             } else {
                 emailToVerify.style['borderColor'] = `red`;
             }
-            console.log(emailToVerify.validity.valid);
             return false;
         } else {
-            console.log(emailToVerify.validity.valid);
             emailToVerify.style['borderColor'] = `#86E0F9`;
             return true;
         }
